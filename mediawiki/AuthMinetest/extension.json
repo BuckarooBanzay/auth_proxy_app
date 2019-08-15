@@ -1,0 +1,17 @@
+{
+	"name": "AuthMinetest",
+	"version": "1.0.0",
+	"author": [
+	    "Gabriel Pérez-Cerezo",
+	    "David Mudrák",
+			"Thomas Rudin"
+	],
+	"url": "https://github.com/thomasrudin-mt/mt_auth_proxy",
+	"description": "Extension for MediaWiki allowing to authenticate users against Minetest servers",
+	"license-name": "GPL-3.0+",
+	"type": "auth",
+	"AutoloadClasses": {
+		"MediaWiki\\Auth\\MinetestPasswordPrimaryAuthenticationProvider": "MinetestPasswordPrimaryAuthenticationProvider.php"
+	},
+	"manifest_version": 1
+}
