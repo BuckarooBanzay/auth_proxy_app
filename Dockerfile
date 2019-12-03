@@ -1,11 +1,7 @@
-FROM ubuntu:artful
-
-RUN apt-get update
-
-# node stuff
-RUN apt-get install -y nodejs npm
+FROM node:alpine
 
 COPY package.json /data/
+COPY package-lock.json /data/
 COPY src /data/src
 
 RUN cd /data && npm i
