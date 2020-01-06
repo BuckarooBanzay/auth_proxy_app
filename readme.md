@@ -9,6 +9,13 @@ To be used with https://github.com/minetest-auth-proxy/auth_proxy_mod
 
 Lets third-party apps query username and password of ingame players
 
+# Docker
+
+Run with docker:
+```sh
+docker run --rm -it -p 8080:8080 minetestauth/minetest-auth-proxy
+```
+
 # Implementations
 
 ## Mediawiki
