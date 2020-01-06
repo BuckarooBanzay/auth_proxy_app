@@ -1,5 +1,6 @@
 FROM node:alpine
 
+COPY .jshintrc /data/
 COPY package.json /data/
 COPY package-lock.json /data/
 COPY src /data/src
