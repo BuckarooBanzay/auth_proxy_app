@@ -4,13 +4,13 @@ const app = require("../app");
 
 const doLogin = require("../promise/login");
 
-const bodyParser = require('body-parser')
-const jsonParser = bodyParser.json()
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
 
 app.post('/api/login', jsonParser, function(req, res){
 
 	if (!req.body.username || !req.body.password){
-		res.status(500).end()
+		res.status(500).end();
 		return;
 	}
 
@@ -21,7 +21,7 @@ app.post('/api/login', jsonParser, function(req, res){
 			message: result.message,
 		});
 	})
-	.catch(e => {
+	.catch(() => {
 		res.status(500).end();
 	});
 

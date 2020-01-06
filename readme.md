@@ -3,7 +3,7 @@ Authorization proxy app for minetest
 =================
 
 
-To be used with https://github.com/thomasrudin-mt/auth_proxy_mod
+To be used with https://github.com/minetest-auth-proxy/auth_proxy_mod
 
 # Overview
 

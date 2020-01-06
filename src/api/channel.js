@@ -2,8 +2,8 @@
 const app = require("../app");
 const events = require("../events");
 
-const bodyParser = require('body-parser')
-const jsonParser = bodyParser.json()
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
 
 const debug = false;
 
