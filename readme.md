@@ -2,6 +2,9 @@
 Authorization proxy app for minetest
 =================
 
+![](https://github.com/minetest-auth-proxy/auth_proxy_app/workflows/jshint/badge.svg)
+![](https://github.com/minetest-auth-proxy/auth_proxy_app/workflows/docker/badge.svg)
+
 
 To be used with https://github.com/minetest-auth-proxy/auth_proxy_mod
 
