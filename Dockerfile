@@ -1,5 +1,5 @@
 # Stage 1 testing
-FROM node:14.12.0-alpine
+FROM node:14.13.1-alpine
 
 COPY .jshintrc /data/
 COPY package.json /data/
@@ -9,7 +9,7 @@ COPY src /data/src
 RUN cd /data && npm i && npm test
 
 # Stage 2 package
-FROM node:14.12.0-alpine
+FROM node:14.13.1-alpine
 
 COPY .jshintrc /data/
 COPY package.json /data/
