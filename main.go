@@ -30,6 +30,7 @@ func SendError(w http.ResponseWriter, msg string) {
 	w.Write([]byte(msg))
 }
 
+//TODO: check for race conditions
 func MinetestEndpoint(w http.ResponseWriter, req *http.Request) {
 	logger.Printf("Got mod-request from %s, method: %s", req.Host, req.Method)
 
