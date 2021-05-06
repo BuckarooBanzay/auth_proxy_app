@@ -2,7 +2,6 @@
 Authorization proxy app for minetest
 =================
 
-![](https://github.com/minetest-auth-proxy/auth_proxy_app/workflows/jshint/badge.svg)
 ![](https://github.com/minetest-auth-proxy/auth_proxy_app/workflows/docker/badge.svg)
 
 
@@ -53,4 +52,4 @@ Or just:
 
 A `Dockerfile` is included for container usage.
 
-Otherwise just `npm install && npm start`
+Otherwise just `go run .` (needs a working go installation)

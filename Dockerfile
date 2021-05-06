@@ -1,25 +1,12 @@
-# Stage 1 testing
-FROM node:15.2.1-alpine
+FROM golang:1.16.3 as stage1
+COPY . /data
+RUN cd /data && \
+	go vet && \
+	go test ./... && \
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build .
 
-COPY .jshintrc /data/
-COPY package.json /data/
-COPY package-lock.json /data/
-COPY src /data/src
-
-RUN cd /data && npm i && npm test
-
-# Stage 2 package
-FROM node:15.2.1-alpine
-
-COPY .jshintrc /data/
-COPY package.json /data/
-COPY package-lock.json /data/
-COPY src /data/src
-
-RUN cd /data && npm i --only=production
-
-WORKDIR /data
-
+FROM alpine:3.13.4
+COPY --from=stage1 /data/auth_proxy /
 EXPOSE 8080
 
-CMD ["node", "src/index.js"]
+CMD ["/auth_proxy"]
