@@ -5,7 +5,7 @@ RUN cd /data && \
 	go test ./... && \
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build .
 
-FROM alpine:3.13.4
+FROM alpine:3.14.2
 COPY --from=stage1 /data/auth_proxy /
 EXPOSE 8080
 
