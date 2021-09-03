@@ -20,7 +20,7 @@ func NewEventEmitter() *EventEmitter {
 	}
 }
 
-func (ee *EventEmitter) AddListener(name string, handler EventHandler) {
+func (ee *EventEmitter) AddListener(handler EventHandler) {
 	ee.mutex.Lock()
 	defer ee.mutex.Unlock()
 
@@ -36,7 +36,7 @@ func (ee *EventEmitter) Emit(name string, payload interface{}) {
 	}
 }
 
-func (ee *EventEmitter) RemoveListener(name string, remove_handler EventHandler) {
+func (ee *EventEmitter) RemoveListener(remove_handler EventHandler) {
 	ee.mutex.Lock()
 	defer ee.mutex.Unlock()
 

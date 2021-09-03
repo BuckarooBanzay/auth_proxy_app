@@ -26,9 +26,9 @@ func TestEventEmitter(t *testing.T) {
 	if handler.count != 0 {
 		t.Fatal("Count not 0")
 	}
-	ee.AddListener("my-event", handler)
+	ee.AddListener(handler)
 	ee.Emit("my-event", "test")
-	ee.RemoveListener("my-event", handler)
+	ee.RemoveListener(handler)
 
 	if handler.count != 1 {
 		t.Fatal("Count not 0")
