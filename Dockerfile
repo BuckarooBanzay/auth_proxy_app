@@ -1,4 +1,4 @@
-FROM golang:1.17.0 as stage1
+FROM golang:1.17.1 as stage1
 COPY . /data
 RUN cd /data && \
 	go vet && \
